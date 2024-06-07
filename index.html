@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Compras dos Últimos Seis Meses</title>
+</head>
+<body>
+    <h1>Pesquisa de Compras dos Últimos Seis Meses</h1>
+    <p>Olá! Queremos saber mais sobre suas compras recentes. Esta pesquisa tem como objetivo entender quais produtos você adquiriu nos últimos seis meses. Por favor, selecione os itens que você comprou em cada categoria. Obrigado pela sua participação!</p>
+    
+    <form action="https://formspree.io/f/mzbnllob" method="POST">
+        <h2>Informações Gerais</h2>
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="Nome" required><br><br>
+
+        <label for="age">Idade:</label><br>
+        <input type="text" id="age" name="Idade" required><br><br>
+
+        <label for="gender">Gênero:</label><br>
+        <input type="radio" id="male" name="Gênero" value="Masculino" required> Masculino<br>
+        <input type="radio" id="female" name="Gênero" value="Feminino"> Feminino<br>
+        <input type="radio" id="other" name="Gênero" value="Outro"> Outro<br>
+        <input type="radio" id="prefer-not-to-say" name="Gênero" value="Prefiro não dizer"> Prefiro não dizer<br><br>
+
+        <label for="city">Cidade/Estado:</label><br>
+        <input type="text" id="city" name="Cidade/Estado" required><br><br>
+
+        <h2>Produtos Comprados</h2>
+
+        <label>Eletrodomésticos:</label><br>
+        <input type="checkbox" name="Eletrodomésticos" value="Geladeira"> Geladeira<br>
+        <input type="checkbox" name="Eletrodomésticos" value="Fogão"> Fogão<br>
+        <input type="checkbox" name="Eletrodomésticos" value="Máquina de lavar"> Máquina de lavar<br>
+        <input type="checkbox" name="Eletrodomésticos" value="Micro-ondas"> Micro-ondas<br>
+        <input type="checkbox" name="Eletrodomésticos" value="Ar-condicionado"> Ar-condicionado<br>
+        <input type="checkbox" name="Eletrodomésticos" value="Outro"> Outro<br><br>
+
+        <label>Eletroportáteis:</label><br>
+        <input type="checkbox" name="Eletroportáteis" value="Liquidificador"> Liquidificador<br>
+        <input type="checkbox" name="Eletroportáteis" value="Batedeira"> Batedeira<br>
+        <input type="checkbox" name="Eletroportáteis" value="Cafeteira"> Cafeteira<br>
+        <input type="checkbox" name="Eletroportáteis" value="Aspirador de pó"> Aspirador de pó<br>
+        <input type="checkbox" name="Eletroportáteis" value="Ferro de passar"> Ferro de passar<br>
+        <input type="checkbox" name="Eletroportáteis" value="Outro"> Outro<br><br>
+
+        <label>Eletrônicos:</label><br>
+        <input type="checkbox" name="Eletrônicos" value="Televisão"> Televisão<br>
+        <input type="checkbox" name="Eletrônicos" value="Computador/Laptop"> Computador/Laptop<br>
+        <input type="checkbox" name="Eletrônicos" value="Smartphone"> Smartphone<br>
+        <input type="checkbox" name="Eletrônicos" value="Tablet"> Tablet<br>
+        <input type="checkbox" name="Eletrônicos" value="Fones de ouvido"> Fones de ouvido<br>
+        <input type="checkbox" name="Eletrônicos" value="Outro"> Outro<br><br>
+
+        <label>Móveis:</label><br>
+        <input type="checkbox" name="Móveis" value="Sofá"> Sofá<br>
+        <input type="checkbox" name="Móveis" value="Mesa de jantar"> Mesa de jantar<br>
+        <input type="checkbox" name="Móveis" value="Cadeira"> Cadeira<br>
+        <input type="checkbox" name="Móveis" value="Cama"> Cama<br>
+        <input type="checkbox" name="Móveis" value="Guarda-roupa"> Guarda-roupa<br>
+        <input type="checkbox" name="Móveis" value="Outro"> Outro<br><br>
+
+        <label>Vestuário:</label><br>
+        <input type="checkbox" name="Vestuário" value="Roupas"> Roupas<br>
+        <input type="checkbox" name="Vestuário" value="Calçados"> Calçados<br>
+        <input type="checkbox" name="Vestuário" value="Acessórios (bolsas, cintos, etc.)"> Acessórios (bolsas, cintos, etc.)<br>
+        <input type="checkbox" name="Vestuário" value="Roupas íntimas"> Roupas íntimas<br>
+        <input type="checkbox" name="Vestuário" value="Outro"> Outro<br><br>
+
+        <label>Beleza e Cuidados Pessoais:</label><br>
+        <input type="checkbox" name="Beleza e Cuidados Pessoais" value="Maquiagem"> Maquiagem<br>
+        <input type="checkbox" name="Beleza e Cuidados Pessoais" value="Produtos de skincare"> Produtos de skincare<br>
+        <input type="checkbox" name="Beleza e Cuidados Pessoais" value="Perfumes"> Perfumes<br>
+        <input type="checkbox" name="Beleza e Cuidados Pessoais" value="Produtos para cabelo"> Produtos para cabelo<br>
+        <input type="checkbox" name="Beleza e Cuidados Pessoais" value="Outro"> Outro<br><br>
+
+        <label>Alimentos e Bebidas:</label><br>
+        <input type="checkbox" name="Alimentos e Bebidas" value="Alimentos não perecíveis"> Alimentos não perecíveis<br>
+        <input type="checkbox" name="Alimentos e Bebidas" value="Bebidas alcoólicas"> Bebidas alcoólicas<br>
+        <input type="checkbox" name="Alimentos e Bebidas" value="Bebidas não alcoólicas"> Bebidas não alcoólicas<br>
+        <input type="checkbox" name="Alimentos e Bebidas" value="Produtos frescos"> Produtos frescos<br>
+        <input type="checkbox" name="Alimentos e Bebidas" value="Outro"> Outro<br><br>
+
+        <label>Artigos Esportivos:</label><br>
+        <input type="checkbox" name="Artigos Esportivos" value="Roupas esportivas"> Roupas esportivas<br>
+        <input type="checkbox" name="Artigos Esportivos" value="Equipamentos de ginástica"> Equipamentos de ginástica<br>
+        <input type="checkbox" name="Artigos Esportivos" value="Acessórios esportivos (bolas, raquetes, etc.)"> Acessórios esportivos (bolas, raquetes, etc.)<br>
+        <input type="checkbox" name="Artigos Esportivos" value="Suplementos alimentares"> Suplementos alimentares<br>
+        <input type="checkbox" name="Artigos Esportivos" value="Outro"> Outro<br><br>
+
+        <label>Livros e Materiais de Estudo:</label><br>
+        <input type="checkbox" name="Livros e Materiais de Estudo" value="Livros físicos"> Livros físicos<br>
+        <input type="checkbox" name="Livros e Materiais de Estudo" value="E-books"> E-books<br>
+        <input type="checkbox" name="Livros e Materiais de Estudo" value="Material de papelaria"> Material de papelaria<br>
+        <input type="checkbox" name="Livros e Materiais de Estudo" value="Cursos online"> Cursos
