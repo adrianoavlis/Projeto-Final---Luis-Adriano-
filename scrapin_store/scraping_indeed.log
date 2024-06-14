@@ -1,0 +1,7 @@
+2024-06-14T18:38:46.488Z - error: Erro ao acessar a página 1 (tentativa 1): Request failed with status code 403
+2024-06-14T18:38:48.567Z - error: Erro ao acessar a página 1 (tentativa 2): Request failed with status code 403
+2024-06-14T18:38:50.615Z - error: Erro ao acessar a página 1 (tentativa 3): Request failed with status code 403
+2024-06-14T18:38:52.712Z - error: Erro ao acessar a página 1 (tentativa 4): Request failed with status code 403
+2024-06-14T18:38:54.788Z - error: Erro ao acessar a página 1 (tentativa 5): Request failed with status code 403
+2024-06-14T18:38:54.789Z - error: Falha ao acessar a página 1 após 5 tentativas. Abortando.
+2024-06-14T18:38:54.789Z - warn: Nenhum dado de emprego foi coletado.
