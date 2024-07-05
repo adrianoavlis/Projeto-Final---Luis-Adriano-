@@ -1,6 +1,6 @@
 # Plataforma de Vendas Informais 
 
-# [INK](https://adrianoavlis.github.io/Projeto-Final---Luis-Adriano-/)
+# [LINK PAGES](https://adrianoavlis.github.io/Projeto-Final---Luis-Adriano-/)
 
 ## Introdução
 
