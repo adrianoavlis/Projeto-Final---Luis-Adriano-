@@ -1,4 +1,6 @@
-# Plataforma de Vendas Informais para a Comunidade da Rocinha
+# Plataforma de Vendas Informais 
+
+# [INK](https://adrianoavlis.github.io/Projeto-Final---Luis-Adriano-/)
 
 ## Introdução
 
@@ -39,16 +41,6 @@ Aqui estão os documentos principais relacionados ao projeto:
 
 - [Relatório do TCC](https://docs.google.com/document/d/1t1XC-fLyMaZpkOdZP-8qTX4Rp8yisGmt84FpqG05ePM/edit?usp=sharing): Documento detalhando todas as etapas, resultados e conclusões do trabalho.
 - [Formulário de Pesquisa](https://forms.gle/tcYKt7R776YEicQP7): Formulário utilizado para coletar dados relevantes ao projeto.
-
-## Como Contribuir
-
-Contribuições são bem-vindas! Siga os passos abaixo para contribuir com o projeto:
-
-1. Fork este repositório.
-2. Crie uma branch: `git checkout -b minha-nova-funcionalidade`.
-3. Faça suas modificações e commit: `git commit -m 'Adicionar nova funcionalidade'`.
-4. Envie para a branch original: `git push origin minha-nova-funcionalidade`.
-5. Crie um pull request.
 
 ## Contato
 
