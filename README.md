@@ -35,13 +35,6 @@ Este repositório contém os recursos, códigos e documentação relacionados ao
 - **Banco de Dados:** SQL, MySQL
 - **Frontend:** React ou React Native (definição futura), JSP, HTML
 
-## Documentos Principais
-
-Aqui estão os documentos principais relacionados ao projeto:
-
-- [Relatório do TCC](https://docs.google.com/document/d/1t1XC-fLyMaZpkOdZP-8qTX4Rp8yisGmt84FpqG05ePM/edit?usp=sharing): Documento detalhando todas as etapas, resultados e conclusões do trabalho.
-- [Formulário de Pesquisa](https://forms.gle/tcYKt7R776YEicQP7): Formulário utilizado para coletar dados relevantes ao projeto.
-
 ## Contato
 
 Se você tiver alguma dúvida, sugestão ou quiser colaborar de alguma forma, sinta-se à vontade para entrar em contato:
