@@ -35,6 +35,12 @@ Este repositório contém os recursos, códigos e documentação relacionados ao
 - **Banco de Dados:** SQL, MySQL
 - **Frontend:** React ou React Native (definição futura), JSP, HTML
 
+## Documentos Principais
+
+Aqui estão os documentos principais relacionados ao projeto:
+
+- [Drive](https://drive.google.com/drive/folders/1DICSK_Ta6ba7ZtMXIoGdz8n8p9WHR7Eb?usp=sharing): Documentos de especificação do trabalho.
+
 ## Contato
 
 Se você tiver alguma dúvida, sugestão ou quiser colaborar de alguma forma, sinta-se à vontade para entrar em contato:
