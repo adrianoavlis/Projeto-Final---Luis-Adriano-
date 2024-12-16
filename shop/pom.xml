@@ -1,54 +1,65 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>analysis</groupId>
-  <artifactId>shop</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>shop Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<properties>
+		<tomcat9-maven-plugin-artifactId46>tomcat9-maven-plugin</tomcat9-maven-plugin-artifactId46>
 
-  <dependencies>
-    <!-- Dependência do Jakarta EE API -->
-    <dependency>
-      <groupId>jakarta.platform</groupId>
-      <artifactId>jakarta.jakartaee-api</artifactId>
-      <version>9.1.0</version> <!-- Verifique a última versão estável -->
-      <scope>provided</scope>
-    </dependency>
+	</properties>
 
-    <!-- JUnit (versão atualizada) -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.7.0</version>
-      <scope>test</scope>
-    </dependency>
 
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.7.0</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>analysis</groupId>
+	<artifactId>shop</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>shop Maven Webapp</name>
+	<url>http://maven.apache.org</url>
 
-  <build>
-    <finalName>shop</finalName>
-    <plugins>
-       <!-- Plugin do Tomcat 10 -->
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat10-maven-plugin</artifactId>
-        <version>10.0.20</version> <!-- Verifique a última versão estável -->
-        <configuration>
-          <port>8081</port> <!-- Porta padrão -->
-          <path>/</path>    <!-- Contexto da aplicação -->
-        </configuration>
-      </plugin>
-     
-    </plugins>
-  </build>
+	<dependencies>
+		<!-- Dependência do Jakarta EE API -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- JUnit (versão atualizada) -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>shop</finalName>
+		<plugins>
+			<!-- Plugin do Tomcat 10 -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat9-maven-plugin</artifactId>
+				<version>9.0</version> <!-- Verifique a última versão estável -->
+				<configuration>
+					<port>8080</port> <!-- Porta padrão -->
+					<path>/</path>    <!-- Contexto da aplicação -->
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>

@@ -1,68 +1,152 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.List" %>
-<%@ page import="analysis.shop.model.Produto" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.List"%>
+<%@ page import="analysis.shop.model.Produto"%>
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Gerenciamento de Produtos</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <h1>Lista de Produtos</h1>
-    
-    <form action="produtos" method="post">
-        <h2>Adicionar Novo Produto</h2>
-        ID: <input type="text" name="id" required><br>
-        Nome: <input type="text" name="nome" required><br>
-        Descrição: <textarea name="descricao" required></textarea><br>
-        Categoria: <input type="text" name="categoria" required><br>
-        Preço: <input type="number" name="preco" step="0.01" required><br>
-        SKU: <input type="text" name="sku" required><br>
-        Quantidade em Estoque: <input type="number" name="quantidadeEmEstoque" required><br>
-        <input type="submit" value="Adicionar Produto">
-    </form>
+<html lang="pt-br">
 
-    <h2>Produtos Cadastrados</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Descrição</th>
-            <th>Categoria</th>
-            <th>Preço</th>
-            <th>SKU</th>
-            <th>Quantidade em Estoque</th>
-            <th>Ações</th>
-        </tr>
-        <%
-            List<Produto> produtos = (List<Produto>) request.getAttribute("produtos");
-            if (produtos != null) {
-                for (Produto produto : produtos) {
-        %>
-        <tr>
-            <td><%= produto.getId() %></td>
-            <td><%= produto.getNome() %></td>
-            <td><%= produto.getDescricao() %></td>
-            <td><%= produto.getCategoria() %></td>
-            <td><%= produto.getPreco() %></td>
-            <td><%= produto.getSku() %></td>
-            <td><%= produto.getQuantidadeEmEstoque() %></td>
-            <td>
-                <a href="editarProduto?id=<%= produto.getId() %>">Editar</a>
-                <a href="deletarProduto?id=<%= produto.getId() %>" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
-            </td>
-        </tr>
-        <%
-                }
-            } else {
-        %>
-        <tr>
-            <td colspan="8">Nenhum produto encontrado.</td>
-        </tr>
-        <%
-            }
-        %>
-    </table>
+<head>
+<meta charset="UTF-8">
+<title>Gerenciamento de Produtos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Argon CSS -->
+<link href="assets/css/argon-dashboard.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+	rel="stylesheet">
+<style>
+</style>
+</head>
+
+<body>
+	<!-- Sidebar -->
+	<nav
+		class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white shadow-sm"
+		id="sidenav-main">
+		<div class="scrollbar-inner">
+			<!-- Logo -->
+			<div class="sidenav-header align-items-center">
+				<a class="navbar-brand" href="javascript:void(0)"> <img
+					src="assets/img/logo-ct.png" alt="Logo" class="rounded-circle"
+					style="width: 50px;">
+				</a>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="index.jsp">
+						<i class="ni ni-shop text-primary"></i> <span>Home</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="<%=request.getContextPath()%>/ProdutoController?acao=Dashboard">
+						<i class="ni ni-chart-bar-32 text-warning"></i> <span>Dashboard</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="<%=request.getContextPath()%>/ProdutoController?acao=Listar">
+						<i class="ni ni-box-2 text-success"></i> <span>Gerenciar
+							Produtos</span>
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Main Content -->
+	<div class="main-content" id="panel">
+		<!-- Header -->
+		<div class="header bg-primary pb-6">
+			<div class="container-fluid">
+				<div class="header-body text-center py-6">
+					<h1 class="text-white">Gerenciar Produtos</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- Card para adicionar produto -->
+		<div class="container-fluid  mt--6">
+			<div class="row py-3">
+				<div class="col-md-4">
+					<div class="card shadow ">
+						<div class="card-body text-center">
+							<i class="fas fa-plus fa-3x mb-3 text-success"></i>
+							<h5 class="card-title">Adicionar Produto</h5>
+							<p class="card-text">Cadastre novos produtos no sistema.</p>
+							<a
+								href="<%=request.getContextPath()%>/ProdutoController?acao=Adicionar"
+								class="btn btn-success"> <i class="fas fa-arrow-right"></i>
+								Adicionar Produto
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tabela de Produtos -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header border-0">
+                            <h3 class="mb-0">Lista de Produtos</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Categoria</th>
+                                        <th>Quantidade em Estoque</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%
+                                    List<Produto> produtos = (List<Produto>) request.getAttribute("listaProdutos");
+                                    if (produtos != null) {
+                                        for (Produto produto : produtos) {
+                                    %>
+                                    <tr>
+                                        <td><%= produto.getId() %></td>
+                                        <td><%= produto.getNome() %></td>
+                                        <td><%= produto.getCategoria() %></td>
+                                        <td><%= produto.getQuantidadeEmEstoque() %></td>
+                                        <td>
+                                            <a href="<%=request.getContextPath()%>/ProdutoController?acao=Alterar&id=<%=produto.getId()%>">Editar</a>
+                                            <a href="<%=request.getContextPath()%>/ProdutoController?acao=Excluir&id=<%=produto.getId()%>">Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <%
+                                        }
+                                    } else {
+                                    %>
+                                    <tr>
+                                        <td colspan="5">Nenhum produto encontrado.</td>
+                                    </tr>
+                                    <%
+                                    }
+                                    %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+		<!-- Footer -->
+		<footer class="footer pt-0">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-lg-6 text-center text-lg-start">
+					<p class="text-muted small mb-0">
+						&copy; 2024 <a href="#" class="text-primary">Gerenciador de
+							Produtos</a>. Todos os direitos reservados.
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/argon-dashboard.min.js"></script>
 </body>
+
 </html>

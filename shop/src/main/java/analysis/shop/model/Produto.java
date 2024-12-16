@@ -1,4 +1,5 @@
 package analysis.shop.model;
+
 public class Produto {
     
     private String id;            
@@ -8,8 +9,8 @@ public class Produto {
     private double preco;          
     private String sku;            
     private int quantidadeEmEstoque; 
+    
 
-  
     private String marca;          
     private double peso;           
     private String cor;            
@@ -44,6 +45,10 @@ public class Produto {
         this.ativo = true; // Produto ativo por padrão
         this.avaliacao = 0.0; 
         this.numeroDeVendas = 0; 
+    }
+    
+    public Produto() {
+    	super();
     }
 
     // Getters e Setters
