@@ -1,4 +1,4 @@
-# Plataforma de Análise de Produtos da Cesta Básica
+# Plataforma para Análise de Produtos da Cesta Básica
 
 ## Introdução
 
