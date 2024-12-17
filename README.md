@@ -1,10 +1,8 @@
-# Plataforma de Vendas Informais - Cesta Básica
-
-# [LINK PAGES](https://adrianoavlis.github.io/Projeto-Final---Luis-Adriano-/)
+# Plataforma de Análise de Produtos da Cesta Básica
 
 ## Introdução
 
-Este repositório contém os recursos, códigos e documentação relacionados ao meu Trabalho de Conclusão de Curso (TCC), cujo objetivo é a implementação de uma plataforma de vendas informais voltada para a comunidade da Rocinha, com foco na comercialização de produtos da cesta básica. O projeto visa atender a uma demanda latente na comunidade, oferecendo uma solução inovadora que não apenas facilitará o comércio online local, mas também proporcionará insights valiosos sobre o relacionamento entre consumidores e produtos essenciais.
+Este repositório contém os recursos, códigos e documentação relacionados ao meu Trabalho de Conclusão de Curso (TCC), cujo objetivo é a implementação de uma plataforma de análise de valor voltada para a comunidade da Rocinha, com foco na comercialização de produtos da cesta básica. O projeto visa atender a uma demanda latente na comunidade, oferecendo uma solução inovadora que não apenas facilitará o comércio local, mas também proporcionará insights valiosos sobre o relacionamento entre consumidores e produtos essenciais.
 
 ## Funcionalidades
 
@@ -29,29 +27,27 @@ Este repositório contém os recursos, códigos e documentação relacionados ao
 7. **Extração de Dados**
    - Realizará a extração de informações de outras plataformas de marketplace por meio de técnicas de scrapping, garantindo que o sistema tenha acesso a dados atualizados e relevantes para análise do mercado de produtos da cesta básica.
 
-## Tecnologias Utilizadas
+## Tecnologias 
 
-- **Backend:** Java EE 7, TomCat
-- **Banco de Dados:** SQL, MySQL
-- **Frontend:** React ou React Native (definição futura), JSP, HTML
+- **Backend:** Java 21 e Spring Boot 3.4.0
+- **Banco de Dados:** MySQL
+- **Frontend:** Angular(em definição), atualmente o projeto esta sendo construindo utilizando JSP. 
 
 ## Documentos Principais
 
-Aqui estão os documentos principais relacionados ao projeto:
+Documentos relacionados ao projeto:
 
 - [Drive](https://drive.google.com/drive/folders/1DICSK_Ta6ba7ZtMXIoGdz8n8p9WHR7Eb?usp=sharing): Documentos de especificação do trabalho.
 
-## Contato
+## Aluno 
 
-Se você tiver alguma dúvida, sugestão ou quiser colaborar de alguma forma, sinta-se à vontade para entrar em contato:
+- Luis Adriano da Silva
+- luisadriano@id.uff.br
 
-- Nome: Luis Adriano da Silva
-- Email: [Luisadriano@id.uff.br]
+## Professor Orientador
 
-## Orientador
-
-- Nome: João Felipe Nicolaci Pimentel
-- Email: joaofelipe@ic.uff.br
+- João Felipe Nicolaci Pimentel
+- joaofelipe@ic.uff.br
 
 ---
 
