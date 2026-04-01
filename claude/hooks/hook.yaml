@@ -1,0 +1,33 @@
+hooks:
+  pre_task:
+    - Ler todos os arquivos em app/Painel
+    - Criar mapa de responsabilidades
+    - Identificar principais fluxos do sistema
+
+  pre_refactor:
+    - Listar problemas encontrados
+    - Classificar por prioridade
+    - Identificar riscos de quebra
+
+  post_file_change:
+    - Validar separação de camadas
+    - Garantir que lógica saiu do controller
+    - Verificar tipagem
+
+  pre_commit:
+    - Rodar testes
+    - Validar imports
+    - Verificar acoplamento
+
+  post_refactor:
+    - Sugerir melhorias adicionais
+    - Identificar pontos para futuras otimizações
+
+  pre_refactor_database:
+  - Mapear todas as queries SQL existentes
+  - Identificar uso de procedures
+  - Validar dependência de estrutura atual
+
+post_database_change:
+  - Garantir que nenhuma tabela foi alterada
+  - Validar compatibilidade com SQL Server

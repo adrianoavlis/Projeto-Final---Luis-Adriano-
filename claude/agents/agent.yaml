@@ -1,0 +1,27 @@
+agents:
+  - name: analyzer_agent
+    role: Entender profundamente o módulo Painel
+    skills:
+      - legacy_code_analyzer
+      - anti_pattern_detector
+
+  - name: architect_agent
+    role: Definir a nova arquitetura
+    skills:
+      - clean_architect
+
+  - name: refactor_agent
+    role: Executar a refatoração
+    skills:
+      - clean_architect
+      - database_refactor_engineer
+
+  - name: api_agent
+    role: Criar API moderna
+    skills:
+      - fastapi_specialist
+
+  - name: qa_agent
+    role: Garantir qualidade
+    skills:
+      - test_engineer

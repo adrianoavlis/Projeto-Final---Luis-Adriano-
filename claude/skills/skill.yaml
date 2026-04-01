@@ -1,0 +1,50 @@
+skills:
+  - name: legacy_code_analyzer
+    description: Especialista em entender código legado
+    responsibilities:
+      - Ler app/Painel completamente
+      - Mapear dependências
+      - Identificar responsabilidades misturadas
+
+  - name: clean_architect
+    description: Especialista em Clean Architecture
+    responsibilities:
+      - Definir separação de camadas
+      - Aplicar SOLID
+      - Reduzir acoplamento
+
+  - name: fastapi_specialist
+    description: Especialista em APIs modernas
+    responsibilities:
+      - Criar endpoints REST
+      - Aplicar dependency injection
+      - Padronizar responses
+
+  - name: database_refactor_engineer
+    description: Refatoração de acesso a dados
+    responsibilities:
+      - Migrar lógica de banco para repositories
+      - Criar models SQLAlchemy
+      - Otimizar queries
+
+  - name: test_engineer
+    description: Garantia de qualidade
+    responsibilities:
+      - Criar testes unitários para use cases
+      - Criar testes de integração
+      - Garantir cobertura mínima
+
+  - name: anti_pattern_detector
+    description: Identifica problemas estruturais
+    responsibilities:
+      - Detectar God classes
+      - Detectar lógica em controllers
+      - Detectar duplicação
+
+  - name: sqlserver_compatibility_guardian
+    description: Garante compatibilidade total com banco existente
+    responsibilities:
+      - Não permitir alterações no schema
+      - Validar queries existentes
+      - Garantir compatibilidade com procedures
+      - Evitar breaking changes no banco  

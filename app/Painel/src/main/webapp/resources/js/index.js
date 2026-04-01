@@ -2706,6 +2706,14 @@
           setTimeout(() => {
             maps.event.trigger(mapaGoogle, "resize");
           }, 200);
+
+          setTimeout(() => {
+            [document.getElementById("mapaMunicipios"), ...Array.from(document.querySelectorAll(".gm-style"))].filter(Boolean).forEach((c) => {
+              c.querySelectorAll(".gm-err-container button, .gm-err-container a").forEach((btn) => {
+                try { btn.click(); } catch (e) {}
+              });
+            });
+          }, 1500);
         }
 
         atualizarMapa();
@@ -4156,6 +4164,14 @@ function ensureMapaMunicipios(maps){
     setTimeout(function(){
       maps.event.trigger(mapaRegionalMap, 'resize');
     }, 200);
+
+    setTimeout(function(){
+      [document.getElementById('mapMunicipios')].concat(Array.from(document.querySelectorAll('.gm-style'))).filter(Boolean).forEach(function(c){
+        c.querySelectorAll('.gm-err-container button, .gm-err-container a').forEach(function(btn){
+          try { btn.click(); } catch(e) {}
+        });
+      });
+    }, 1500);
   }
   return mapaRegionalMap ? { map: mapaRegionalMap, maps: maps } : null;
 }
