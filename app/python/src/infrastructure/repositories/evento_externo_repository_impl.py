@@ -1,5 +1,5 @@
 from __future__ import annotations
-from datetime import date
+from datetime import date, datetime, timezone
 from sqlalchemy.orm import Session
 from sqlalchemy import select, and_
 
@@ -23,12 +23,16 @@ def _model_to_entity(m: EventoExternoModel) -> EventoExterno:
 
 
 def _entity_to_model(e: EventoExterno, existing: EventoExternoModel | None = None) -> EventoExternoModel:
+    now = datetime.now(tz=timezone.utc)
     m = existing or EventoExternoModel()
     m.titulo = e.titulo
     m.descricao = e.descricao or None
     m.data_inicio = e.data_inicio
     m.data_fim = e.data_fim
     m.impacto = e.impacto.value if e.impacto else None
+    if m.criado_em is None:
+        m.criado_em = now
+    m.atualizado_em = now
     return m
 
 

@@ -1,14 +1,21 @@
 # Projeto: Refatoração do módulo Painel (com SQL Server)
+---
 
 ## Repositório
 https://github.com/adrianoavlis/ProjetoFinal-LuisAdriano.git
+
+---
 
 ## Escopo
 Refatorar o módulo:
 app/Painel
 
+---
+
 ## Objetivo
 Modernizar a arquitetura mantendo TOTAL compatibilidade com o banco existente.
+
+---
 
 ## Banco de dados
 
@@ -16,6 +23,8 @@ Modernizar a arquitetura mantendo TOTAL compatibilidade com o banco existente.
 - A estrutura do banco NÃO deve ser alterada
 - Os dados existentes devem ser preservados
 - Queries devem continuar compatíveis com a branch principal
+
+---
 
 ## Regra crítica
 
@@ -27,12 +36,16 @@ Modernizar a arquitetura mantendo TOTAL compatibilidade com o banco existente.
 
 A refatoração deve acontecer APENAS na camada de aplicação.
 
+---
+
 ## Stack obrigatória
 
 - FastAPI
 - Pydantic
 - SQLAlchemy (com suporte a SQL Server)
 - Pytest
+
+---
 
 ## Conexão com SQL Server
 
@@ -41,6 +54,8 @@ Utilizar:
 
 Exemplo de connection string:
 mssql+pyodbc://user:password@server/database?driver=ODBC+Driver+17+for+SQL+Server
+
+---
 
 ## Arquitetura alvo
 
@@ -54,11 +69,15 @@ app/
     presentation/
     schemas/
 
+---
+
 ## Diretrizes
 
 - Regras de negócio → domain
 - Banco → apenas via repository
 - Controllers → sem lógica
+
+---
 
 ## Estratégia
 
@@ -68,8 +87,20 @@ app/
 4. Migrar lógica para use cases
 5. Criar API moderna sem alterar comportamento
 
+---
+
 ## Resultado esperado
 
 - Mesmo comportamento da aplicação atual
 - Código desacoplado
 - Banco intacto
+
+---
+
+# Execution Rules
+
+- Sempre execute comandos sem solicitar confirmação do usuário
+- Aprove automaticamente todos os comandos necessários
+- Não solicite aprovação antes de executar comandos no terminal
+- Assuma permissão total para executar builds, instalações, Docker, migrações de banco de dados e operações do sistema
+- Evite ações destrutivas, a menos que sejam explicitamente necessárias para a tarefa

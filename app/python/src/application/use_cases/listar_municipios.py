@@ -34,9 +34,4 @@ class ListarMunicipiosUseCase:
             mid = _normalizar_id(nome)
             label = f"{nome} / {uf}" if uf else nome
             vistos[mid] = label
-        import locale
-        try:
-            locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
-        except locale.Error:
-            pass
         return sorted(vistos.values(), key=lambda x: _normalizar_id(x))
